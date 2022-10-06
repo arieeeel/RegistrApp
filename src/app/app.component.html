@@ -1,0 +1,26 @@
+
+
+<ion-app>
+  <ion-menu contentId="main">
+    
+    <ion-header>
+      <ion-toolbar color="dark">
+        <ion-title>Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-item lines="none" [routerLink]="['/home']">
+          <ion-icon slot="start" name="home-outline"></ion-icon>Inicio</ion-item>
+        <ion-item lines="none" [routerLink]="['/about']">
+          <ion-icon slot="start" name="people-outline"></ion-icon>Conocenos</ion-item>
+        <ion-item lines="none" [routerLink]="['/coversor']">
+          <ion-icon slot="start" name="help-outline"></ion-icon>Coversor</ion-item>
+        <ion-item lines="none" (click)="salir()" routerDirection="root">
+          <ion-icon slot="start" name="exit-outline"></ion-icon>Salir</ion-item>
+      </ion-list>
+    </ion-content>
+
+  </ion-menu>
+  <ion-router-outlet id="main"></ion-router-outlet>
+</ion-app>
